@@ -13,10 +13,11 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
+  console.log(req.body);
   console.log(JSON.stringify(req.body, 0, 2));
   res.status(200).send(req.body);
 });
 
 app.listen(port, () => {
-    console.log(`API is ready on http://localhost:${3001}`);
-  });
+  console.log(`API is ready on http://localhost:${3001}`);
+});
