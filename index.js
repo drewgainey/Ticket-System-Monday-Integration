@@ -13,9 +13,9 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  console.log(req.body);
-  console.log(JSON.stringify(req.body, 0, 2));
-  res.status(200).send(req.body);
+  const {challenge} = req.body;
+  console.log(JSON.stringify({challenge: challenge}));
+  res.status(200).send(JSON.stringify({challenge: challenge}));
 });
 
 app.listen(port, () => {
