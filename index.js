@@ -17,3 +17,6 @@ app.post("/", (req, res) => {
   res.status(200).send(req.body);
 });
 
+app.listen(port, () => {
+    console.log(`API is ready on http://localhost:${3001}`);
+  });
