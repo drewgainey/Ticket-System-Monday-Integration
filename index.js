@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 
 app.post("/", (req, res) => {
   const challenge = req.body.challenge;
-  console.log(challenge);
+  console.log(req);
   console.log(JSON.stringify({challenge: challenge}));
   res.status(200).send(JSON.stringify({challenge: challenge}));
 });
