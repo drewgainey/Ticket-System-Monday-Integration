@@ -1,13 +1,13 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const bodyParser = require("body-parser");
 
 const port = process.env.PORT || 3001;
 
-//handle CORS error
 app.use(cors());
+app.use(bodyParser.json());
 
-//mount API router
 app.get("/", (req, res) => {
   res.send("hello world");
 });
