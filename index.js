@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  const {challenge} = req.body;
+  const challenge = req.body.challenge;
   console.log(JSON.stringify({challenge: challenge}));
   res.status(200).send(JSON.stringify({challenge: challenge}));
 });
